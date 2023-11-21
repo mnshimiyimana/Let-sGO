@@ -5,6 +5,9 @@ import {Navbar, Nav, NavDropdown, Image, Row} from 'react-bootstrap'
 class NavBar extends Component {
 
     render() {
+        const brandTextStyle = {
+            color: 'white',
+        };
         var user = localStorage.getItem('user')
         if (user) {
             console.log(JSON.stringify(user))
@@ -12,9 +15,9 @@ class NavBar extends Component {
         }
         return (
             <>
-                <Navbar bg="light" expand="sm">
-                    <Navbar.Brand href="/">
-                        Railway E-Ticketing
+                <Navbar bg="red" expand="sm" className="custom-navbar">
+                    <Navbar.Brand href="/" style={brandTextStyle} >
+                        Let's Go E-Ticketing
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -32,8 +35,8 @@ class NavBar extends Component {
                                 </>
                                 :
                                 <>
-                                    <Nav.Link href="" onClick={this.props.handleLoginShow}>Sign In</Nav.Link>
-                                    <Nav.Link href="" onClick={this.props.handleRegisterShow}>Join Now</Nav.Link>
+                                    <Nav.Link href="" style={brandTextStyle} onClick={this.props.handleLoginShow}>Sign In</Nav.Link>
+                                    <Nav.Link href="" style={brandTextStyle} onClick={this.props.handleRegisterShow}>Join Now</Nav.Link>
                                 </>
 
                             }
@@ -43,7 +46,7 @@ class NavBar extends Component {
 
                 <Row style={{alignItems: 'center', justifyContent: 'center', width: '100%', margin: 0}}>
                     <div style={{width: '100%'}}>
-                        <Image style={{width: '100%'}} src={require("../../images/railway2.jpg")}/>
+                        <Image style={{width: '100%'}} src={require("../../images/buses.png")}/>
                     </div>
                 </Row>
 

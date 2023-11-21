@@ -13,8 +13,8 @@ class Footer extends Component {
                     bottom: 0,
                     width: '100%'
                 }}>
-                    <div className="footer-copyright text-center py-3">© 2019 Copyright
-                        <p>Tenusha, Ranmal, Vimukthi, Aravinda</p>
+                    <div className="footer-copyright text-center py-3">© 2023 Copyright
+                        <p>MAUMAU</p>
                     </div>
                 </footer>
             </div>

@@ -8,6 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.custom-navbar {
+  background-color: #207adb; /* Set the background color to blue */
+  /* Add additional styles as needed */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -191,7 +191,7 @@ class Home extends Component {
             <Form style={{ padding: 20 }} onSubmit={(e) => this.handleSubmit(e)}>
                 <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <Form.Row style={{ width: '75%', borderBottom: '1px solid rgb(200,200,200)', marginBottom: 20 }}>
-                        <h4>Book Train Tickets</h4>
+                        <h4>Book Your Tickets</h4>
                     </Form.Row>
                     <Form.Row style={{ width: '75%' }}>
                         <Form.Group as={Col} controlId="from">
@@ -206,15 +206,15 @@ class Home extends Component {
                     </Form.Row>
                     <Form.Row style={{ width: '75%' }}>
                         <Form.Group as={Col} controlId="from">
-                            <Form.Label>Train</Form.Label>
+                            <Form.Label>Bus</Form.Label>
                             <Select options={this.state.trains} onChange={this.handleChange("train")}
                                 value={this.state.train} />
                         </Form.Group>
-                        <Form.Group as={Col} controlId="to">
+                        {/* <Form.Group as={Col} controlId="to">
                             <Form.Label>Class</Form.Label>
                             <Select options={this.state.classes} onChange={this.handleChange("trainClass")}
                                 value={this.state.trainClass} />
-                        </Form.Group>
+                        </Form.Group> */}
                     </Form.Row>
                     <Form.Row style={{ width: '75%' }}>
                         <Col md={6} lg={6} xl={6}>

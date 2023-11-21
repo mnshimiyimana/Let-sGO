@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 import { Col, Button, Form, Card, Row } from 'react-bootstrap'
 import { contact } from '../Services'
@@ -40,6 +41,8 @@ class Contact extends Component {
     }
 
     render() {
+        const iconSize = 30;
+        const iconColor = '#0077B5';
         return (
             <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <Col>
@@ -81,18 +84,31 @@ class Contact extends Component {
                 <Col>
                     <Row style={{ alignItems: 'center', justifyContent: 'center', margin: 30 }}>
                         <Col>
-                            <div id="page">
-                                <p><strong><span style={{ textDecoration: 'underline' }}>General Information</span></strong></p>
-                                <p><strong>Telephones : </strong>+94 11 2 421281 <br /><strong>Fax Nos : </strong>+94 11 2 446490<br /><strong>Email : </strong>
-                                    <a href="mailto:gmr@railway.gov.lk">gmr@railway.gov.lk</a>
-                                    <span style={{ display: 'none' }}>This e-mail address is being protected from spambots. You need JavaScript enabled to view it
-                                        </span>
-                                </p>
-                                <p><strong>Railway Head Office Exchange Number</strong> : +94 11 2 421281</p>
-                                <p><strong>Fort Railway Station Inquiries</strong> : +94 11 2 434215</p>
-                                <p><strong>Deputy Operating Superintendent</strong> : +94 11 2 687099</p>
-                                <p className="MsoNormal"><strong>Assistant Transportation Superintendent (Operation)</strong> : +94 11 2 692286</p>
-                            </div>
+
+
+<div id="page">
+  <p><strong><span style={{ textDecoration: 'underline' }}>General Information</span></strong></p>
+  <p>
+    <strong>Telephones :</strong> +250 788 0000 <br />
+    <strong>PO Box :</strong> 2004<br />
+    <strong>Email :</strong>
+    <a href="mailto:letsgo@gmail.com"> letsgo@gmail.com</a>
+    <span style={{ display: 'none' }}>This e-mail address is being protected from spambots. You need JavaScript enabled to view it</span>
+  </p>
+  <p><strong>Location</strong> : Kigali, Rwanda</p>
+  <p className="MsoNormal"><strong>Station Representative</strong> : 343434</p>
+  
+  <p>
+        <a href="https://www.instagram.com/your_instagram_profile" target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={iconSize} style={{ marginRight: '10px', color: iconColor }} />
+        </a>
+        
+        <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={iconSize} style={{ marginLeft: '10px', color: iconColor }}/>
+        </a>
+  </p>
+</div>
+
                         </Col>
                     </Row>
                 </Col>
