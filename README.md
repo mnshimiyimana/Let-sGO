@@ -14,7 +14,7 @@ The transportation system project encompasses the development of software and in
 	
 	- once the node modules are installed, ensure the configurations in "src/config.json" file is valid.
 	
-	- then execute the command, "npm start"
+	- then execute the command, "npm run start"
 
 	- Then you are ready to use the web application. (localhost:3000)
 
