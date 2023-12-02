@@ -12,7 +12,7 @@
     "messageClient": {
         "accountSid": "AC21d0577f13213c7bfr4537b0c784",
         "authToken": "052213213c121c45e9924cd987a0",
-        "phoneNo": "+12018222051"
+        "phoneNo": ""
     },
     "backendUrl" : "http://localhost:3001",
     "frontendUrl" : "http://localhost:3000",
