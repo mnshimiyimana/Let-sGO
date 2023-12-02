@@ -124,7 +124,7 @@ class Reservations extends Component {
                                             <Col>From <b>{reservation.from}</b> to <b>{reservation.to}</b></Col>
                                         </Row>
                                         <Row>
-                                            <Col>Train : {reservation.train}</Col>
+                                            <Col>Bus : {reservation.train}</Col>
                                         </Row>
                                         <Row>
                                             <Col>Class : {reservation.trainClass}</Col>

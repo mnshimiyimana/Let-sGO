@@ -239,6 +239,7 @@ class Home extends Component {
                             <Form.Control placeholder="qty" value={this.state.qty} onChange={this.handleQtyChange()} />
                         </Col>
                     </Form.Row>
+                    
                     <Form.Row style={{ width: '75%', paddingLeft: 5, align: 'right' }}>
                         {this.state.amount &&
                             <Table striped size="sm">
