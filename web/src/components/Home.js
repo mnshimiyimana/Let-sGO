@@ -16,7 +16,7 @@ class Home extends Component {
             toOptions: [],
             trains: [],
             errMsg: 'Required fields empty or invalid!!!',
-            showErr: false,
+            showErr: true,
         };
     }
 
@@ -86,7 +86,7 @@ class Home extends Component {
                     console.log(err)
                 })
         }
-        if (type === 'train') {
+        if (type === 'Bus') {
             classes()
                 .then(res => {
                     var classes = []
@@ -184,6 +184,7 @@ class Home extends Component {
         this.updateAvailableSeats()
     }
 
+
     render() {
         const asColor = this.state.availableSeats < this.state.qty ? "red" : "black"
         const bookingDisable = this.state.availableSeats < this.state.qty
@@ -200,7 +201,7 @@ class Home extends Component {
                         </Form.Group>
                         <Form.Group as={Col} controlId="to">
                             <Form.Label>To</Form.Label>
-                            <Select options={this.state.toOptions} onChange={this.handleChange("to")}
+                            <Select options={this.state.fromOptions} onChange={this.handleChange("to")}
                                 value={this.state.to} />
                         </Form.Group>
                     </Form.Row>
@@ -239,7 +240,7 @@ class Home extends Component {
                             <Form.Control placeholder="qty" value={this.state.qty} onChange={this.handleQtyChange()} />
                         </Col>
                     </Form.Row>
-                    
+
                     <Form.Row style={{ width: '75%', paddingLeft: 5, align: 'right' }}>
                         {this.state.amount &&
                             <Table striped size="sm">
@@ -256,15 +257,15 @@ class Home extends Component {
                                     </tr>
                                     <tr>
                                         <td align='right' style={{ border: "1px solid #dee2e6" }}>Amount</td>
-                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.amount} LKR</td>
+                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.amount} RWF</td>
                                     </tr>
                                     <tr>
                                         <td align='right' style={{ border: "1px solid #dee2e6" }}>Discount</td>
-                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.discount} LKR</td>
+                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.discount} RWF</td>
                                     </tr>
                                     <tr>
                                         <td align='right' style={{ border: "1px solid #dee2e6" }}>Total</td>
-                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.total} LKR</td>
+                                        <td align='right' style={{ border: "1px solid #dee2e6" }}>{this.state.total} RWF</td>
                                     </tr>
                                 </tbody>
                             </Table>

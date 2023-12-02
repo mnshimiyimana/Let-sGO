@@ -19,11 +19,11 @@ const reservationSchema = mongoose.Schema({
     },
     trainClass: {
         type: String,
-        required: true,
+        required: false,
     },
     time: {
         type: String,
-        required: true,
+        required: false,
     },
     qty: {
         type: Number,

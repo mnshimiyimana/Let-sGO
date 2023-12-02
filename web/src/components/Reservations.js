@@ -126,9 +126,9 @@ class Reservations extends Component {
                                         <Row>
                                             <Col>Bus : {reservation.train}</Col>
                                         </Row>
-                                        <Row>
+                                        {/* <Row>
                                             <Col>Class : {reservation.trainClass}</Col>
-                                        </Row>
+                                        </Row> */}
                                         <Row>
                                             <Col>Quantity : {reservation.qty}</Col>
                                         </Row>

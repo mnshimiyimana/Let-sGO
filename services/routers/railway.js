@@ -81,8 +81,8 @@ router.post('/railway/reservations', async (req, res) => {
         client.sendReservationEmail({
             ...body,
             html: html,
-            subject: 'Railway e-Ticket',
-            path: 'images/' + result._id + '.png'
+            subject: " Lets'Go E-Ticket ",
+            path: 'images/buses.png' + result._id + '.png'
         })
 
         // send text message
@@ -117,10 +117,9 @@ router.get('/railway/users/:user/reservations', async (req, res) => {
 router.get('/railway/reservations/trains/:train/class/:trainClass/date/:date/time/:time', async (req, res) => {
     try {
         const train = req.params.train
-        const trainClass = req.params.trainClass
         const date = req.params.date
         const time = req.params.time
-        const result = await reservationModel.find({ train: train, trainClass: trainClass, date: date, time: time })
+        const result = await reservationModel.find({ train: train, date: date, time: time })
         var bookings = 0
         result.map(item => bookings += item.qty)
         if (result.length <= 0) {

@@ -63,3 +63,5 @@ typings/
 
 .idea/
 services/images/
+src/services.js
+src/serviceWorker.js
